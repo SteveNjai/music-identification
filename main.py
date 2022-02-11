@@ -18,9 +18,12 @@ sample_rate = 44100
 window_size = 2048
 
 #main function
-if __name__ == '__main__':
+def main(audio,playtime,window_size,sample_rate):
+    # run spectrogram function
+    freq_plot(audio, playtime)
+    # run FFT function
+    spectrogram(audio, playtime, window_size,sample_rate)  # call the spectrogram
 
-    #run spectrogram function
-    freq_plot(audio,playtime)
-    #run FFT function
-    spectrogram(audio,playtime, window_size, sample_rate) #call the spectrogram
+#call main function
+if __name__ == '__main__':
+    main(audio,playtime,window_size,sample_rate)
