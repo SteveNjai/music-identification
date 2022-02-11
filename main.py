@@ -10,7 +10,7 @@ from specgram import spectrogram
 from fingerprinting import freq_plot
 
 #parameters
-audio = 'Audio files/awakening - january.wav'
+audio = 'Aawakening - january.wav'
 playtime =2 #seconds to analyze
 sample_rate = 44100
 window_size = 2048
