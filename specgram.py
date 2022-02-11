@@ -16,7 +16,7 @@ def spectrogram(file,playtime, window_size, srate):
     aud = aud[:, 0]  # select left channel only
 
     first = aud[:int(Fs * playtime)]  # trim the first 125 seconds
-    powerSpectrum, frequenciesFound, time, imageAxis = plt.specgram(first,Fs=Fs, NFFT=window_size)
+    powerSpectrum, frequenciesFound, time, imageAxis = plt.specgram(first,Fs=srate, NFFT=window_size)
     plt.title('Spectrogram: '+ file)
     plt.xlabel('time, s')
     plt.ylabel('Frequency, Hz')
